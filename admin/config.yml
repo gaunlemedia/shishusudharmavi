@@ -1,0 +1,33 @@
+backend:
+  name: git-gateway
+  branch: main # वा तपाईंको GitHub को मुख्य ब्रान्च (उदा: main)
+
+# फोटो अपलोड हुने फोल्डर
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# Admin Panel मा के-के थप्न मिल्ने बनाउने?
+collections:
+  # १. नयाँ सूचनाहरू थप्ने सेक्सन
+  - name: "notices"
+    label: "सूचनाहरू (Notices)"
+    folder: "content/notices"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "सूचनाको शीर्षक (Title)", name: "title", widget: "string" }
+      - { label: "मिति (Date)", name: "date", widget: "datetime" }
+      - { label: "विवरण (Details)", name: "body", widget: "markdown" }
+      - { label: "फाइल/फोटो (File/Photo)", name: "file", widget: "file", required: false }
+
+  # २. शिक्षकहरूको विवरण थप्ने सेक्सन
+  - name: "teachers"
+    label: "शिक्षक वर्ग (Teachers)"
+    folder: "content/teachers"
+    create: true
+    slug: "{{name}}"
+    fields:
+      - { label: "शिक्षकको नाम (Name)", name: "name", widget: "string" }
+      - { label: "पद/विषय (Designation)", name: "designation", widget: "string" }
+      - { label: "फोन नम्बर (Phone)", name: "phone", widget: "string", required: false }
+      - { label: "फोटो (Photo)", name: "photo", widget: "image" }
