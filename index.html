@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>श्री शिशु सुधार माध्यमिक विद्यालय | गाजरी, डोटी</title>
-    <meta name="description" content="श्री शिशु सुधार माध्यमिक विद्यालय, गाजरी, पूर्वीचौकी गाउँपालिका-६, डोटीको आधिकारिक वेबसाइट">
+    <meta name="description" content="स्थापना वि.सं. २०१७। श्री शिशु सुधार माध्यमिक विद्यालय, गाजरी, पूर्वीचौकी गाउँपालिका-६, डोटीको आधिकारिक वेबसाइट">
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -46,9 +46,10 @@
             font-size: 0.9rem;
         }
 
+        /* विद्यालय भवनको फोटो (school.jpg) */
         .hero-section {
-            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), 
-                        url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1600&q=80');
+            background: linear-gradient(rgba(0, 51, 102, 0.82), rgba(0, 51, 102, 0.82)), 
+                        url('school.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -111,15 +112,21 @@
             color: #ffffff;
             text-decoration: underline;
         }
+
+        .school-logo {
+            height: 52px;
+            width: auto;
+            object-fit: contain;
+        }
     </style>
 </head>
 <body>
 
-    <!-- शीर्ष जानकारी पट्टी (Top Bar) -->
+    <!-- शीर्ष जानकारी पट्टी -->
     <div class="top-bar py-2">
         <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
             <div>
-                <i class="fa-solid fa-location-dot me-2 text-warning"></i> गाजरी, पूर्वीचौकी गाउँपालिका-६, डोटी, सुदूरपश्चिम प्रदेश, नेपाल
+                <i class="fa-solid fa-location-dot me-2 text-warning"></i> गाजरी, पूर्वीचौकी गाउँपालिका-६, डोटी | <i class="fa-solid fa-calendar-check ms-1 me-1 text-warning"></i> स्थापना: वि.सं. २०१७
                 <span class="ms-3 d-none d-md-inline"><i class="fa-solid fa-phone me-1 text-warning"></i> +977-98XXXXXXXX</span>
             </div>
             <div class="d-flex align-items-center gap-3">
@@ -133,14 +140,16 @@
         </div>
     </div>
 
-    <!-- नेभिगेसन बार (Navigation Bar) -->
+    <!-- नेभिगेसन बार (Logo जोडिएको) -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-                <i class="fa-solid fa-school text-primary fs-1"></i>
+                <!-- विद्यालयको Logo (logo.png) -->
+                <img src="logo.png" alt="श्री शिशु सुधार माध्यमिक विद्यालय Logo" class="school-logo" onerror="this.style.display='none'; document.getElementById('fallback-icon').style.display='inline-block';">
+                <i id="fallback-icon" class="fa-solid fa-school text-primary fs-1" style="display:none;"></i>
                 <div>
                     <strong class="d-block text-primary lh-1 fs-5">श्री शिशु सुधार माध्यमिक विद्यालय</strong>
-                    <small class="text-muted fs-7">गाजरी, डोटी</small>
+                    <small class="text-muted fs-7">गाजरी, पूर्वीचौकी-६, डोटी (स्था: २०१७)</small>
                 </div>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -161,23 +170,24 @@
         </div>
     </nav>
 
-    <!-- चल्ने सूचना पट्टी (Scrolling Notice) -->
+    <!-- चल्ने सूचना पट्टी -->
     <div class="marquee-notice">
         <div class="container d-flex align-items-center">
             <span class="badge bg-danger me-3 fs-6">ताजा सूचना</span>
             <marquee behavior="scroll" direction="left" scrollamount="7" onmouseover="this.stop();" onmouseout="this.start();">
-                📢 शैक्षिक सत्र २०८१/८२ का लागि नयाँ भर्ना खुला गरिएको छ! | 🎓 वार्षिक परीक्षाको नतिजा प्रकाशित गरिएको छ, तलको रिजल्ट सेक्सनबाट चेक गर्नुहोस्।
+                📢 नयाँ शैक्षिक सत्रका लागि भर्ना खुला गरिएको छ! | 🎓 परीक्षाको नतिजा प्रकाशित गरिएको छ, तलको रिजल्ट सेक्सनबाट चेक गर्नुहोस्।
             </marquee>
         </div>
     </div>
 
-    <!-- मुख्य ब्यानर (Hero Section) -->
+    <!-- मुख्य ब्यानर (school.jpg बैकग्राउन्ड) -->
     <section id="home" class="hero-section">
         <div class="container" data-aos="zoom-in">
+            <span class="badge bg-warning text-dark px-3 py-2 fs-6 mb-3 fw-bold">स्थापना: वि.सं. २०१७</span>
             <h1 class="display-4 fw-bold">श्री शिशु सुधार माध्यमिक विद्यालय</h1>
-            <p class="fs-4 mt-2">गाजरी, पूर्वीचौकी-६, डोटी</p>
+            <p class="fs-4 mt-2">गाजरी, पूर्वीचौकी गाउँपालिका-६, डोटी</p>
             <p class="lead text-light max-w-700 mx-auto mt-3">
-                "गुणस्तरीय शिक्षा, नैतिक संस्कार र उज्ज्वल भविष्यको सम्वाहक"
+                "वि.सं. २०१७ देखि निरन्तर गुणस्तरीय शिक्षा, नैतिक संस्कार र उज्ज्वल भविष्यको सम्वाहक"
             </p>
             <div class="mt-4">
                 <a href="#admissionModal" data-bs-toggle="modal" class="btn btn-warning btn-lg me-2 fw-bold shadow">
@@ -190,7 +200,7 @@
         </div>
     </section>
 
-    <!-- विशेषताहरू (Features) -->
+    <!-- विशेषताहरू -->
     <section class="py-5">
         <div class="container">
             <div class="row g-4">
@@ -212,35 +222,41 @@
                     <div class="card card-custom p-4 text-center h-100">
                         <i class="fa-solid fa-award fs-1 text-primary mb-3"></i>
                         <h4>छात्रवृत्ति तथा सुविधा</h4>
-                        <p class="text-muted">जेहेन्दार, सीमान्तकृत तथा गरिब एवं जेहेन्दार विद्यार्थीहरूका लागि विशेष छात्रवृत्तिको व्यवस्था।</p>
+                        <p class="text-muted">जेहेन्दार, सीमान्तकृत तथा गरिब बालबालिकाहरूका लागि विशेष छात्रवृत्तिको व्यवस्था।</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- प्रधानाध्यापकको सन्देश र परिचय (About Us) -->
+    <!-- प्रधानाध्यापकको सन्देश र विद्यालय परिचय (principal.jpg) -->
     <section id="about" class="py-5 bg-white">
         <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-lg-5" data-aos="fade-right">
-                    <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80" alt="प्रधानाध्यापक" class="img-fluid rounded-3 shadow-lg">
+                    <!-- प्रधानाध्यापकको फोटो (principal.jpg) -->
+                    <img src="principal.jpg" alt="प्रधानाध्यापक" class="img-fluid rounded-3 shadow-lg" onerror="this.src='https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80';">
                 </div>
                 <div class="col-lg-7" data-aos="fade-left">
                     <h2 class="section-heading">प्रधानाध्यापकको सन्देश</h2>
-                    <p class="lead">आदरणीय अभिभावक तथा प्यारा विद्यार्थी भाइबहिनीहरू,</p>
-                    <p>सुदूरपश्चिम प्रदेश, डोटी जिल्लाको पूर्वीचौकी गाउँपालिका वडा नं. ६ गाजरीमा अवस्थित श्री शिशु सुधार माध्यमिक विद्यालयमा यहाँहरूलाई हार्दिक स्वागत छ। हाम्रो विद्यालयले ग्रामीण भेगका बालबालिकामा ज्ञानको दीप प्रज्वलन गर्दै आएको छ।</p>
+                    <p class="lead">आदरणीय अभिभावक, शिक्षाप्रेमी तथा प्यारा विद्यार्थी भाइबहिनीहरू,</p>
+                    <p>वि.सं. २०१७ सालमा स्थापित श्री शिशु सुधार माध्यमिक विद्यालय गाजरी, डोटीको आधिकारिक वेबसाइटमा यहाँहरूलाई हार्दिक स्वागत छ। छ दशकभन्दा लामो ऐतिहासिक यात्रामा यस विद्यालयले सुदूरपश्चिमको ग्रामीण भेगमा शिक्षाको उज्यालो फैलाउँदै आएको छ।</p>
                     <div class="p-3 bg-light rounded-3 border-start border-primary border-4 my-3">
-                        <em>"हामी विद्यार्थीहरूलाई किтаबी ज्ञानका साथै व्यावहारिक, नैतिक र समयसापेक्ष प्रविधिमैत्री शिक्षा दिन कटिबद्ध छौँ।"</em>
+                        <em>"हामी प्रत्येक बालबालिकालाई किताबी ज्ञानका साथै अनुशासित, प्रविधिमैत्री र सक्षम नागरिक बनाउन कटिबद्ध छौँ।"</em>
                     </div>
-                    <strong>- विद्यालय प्रशासन</strong><br>
+                    <strong>- प्रधानाध्यापक</strong><br>
                     <small class="text-muted">श्री शिशु सुधार माध्यमिक विद्यालय, गाजरी, डोटी</small>
+
+                    <hr class="my-4">
+
+                    <h4 class="fw-bold text-primary">विद्यालयको ऐतिहासिक परिचय</h4>
+                    <p>वि.सं. २०१७ मा स्थापना भएको यो विद्यालय डोटी जिल्लाको पूर्वीचौकी गाउँपालिका वडा नं. ६ गाजरी क्षेत्रकै एक ऐतिहासिक र अग्रणी शैक्षिक संस्था हो। बालविकासदेखि कक्षा १० सम्म सञ्चालित यस विद्यालयले गुणस्तरीय र व्यवहारिक शिक्षा प्रदान गर्दै आइरहेको छ।</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- शैक्षिक कार्यक्रमहरू (Academics) -->
+    <!-- शैक्षिक कार्यक्रमहरू -->
     <section id="academics" class="py-5">
         <div class="container">
             <h2 class="section-heading">शैक्षिक कार्यक्रमहरू (Academics)</h2>
@@ -270,7 +286,7 @@
         </div>
     </section>
 
-    <!-- सूचना तथा डाउनलोड सेक्सन (Notices) -->
+    <!-- सूचना तथा डाउनलोड्स -->
     <section id="notices" class="py-5 bg-white">
         <div class="container">
             <h2 class="section-heading">सूचना बोर्ड तथा डाउनलोड्स</h2>
@@ -280,14 +296,14 @@
                         <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center p-3">
                             <div>
                                 <h6 class="mb-1 fw-bold">वार्षिक परीक्षाको तालिका प्रकाशन सम्बन्धित सूचना</h6>
-                                <small class="text-muted"><i class="fa-regular fa-calendar-days me-1"></i> प्रकाशन मिति: २०८१/०३/१५</small>
+                                <small class="text-muted"><i class="fa-regular fa-calendar-days me-1"></i> सूचना प्रकाशित मिति</small>
                             </div>
                             <a href="#" class="btn btn-sm btn-outline-primary"><i class="fa-solid fa-download"></i> PDF डाउनलोड</a>
                         </div>
                         <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center p-3">
                             <div>
-                                <h6 class="mb-1 fw-bold">नयाँ शैक्षिक सत्रको भर्ना तथा छात्रवृत्ति सम्बन्धी सूचना</h6>
-                                <small class="text-muted"><i class="fa-regular fa-calendar-days me-1"></i> प्रकाशन मिति: २०८१/०३/१०</small>
+                                <h6 class="mb-1 fw-bold">नयाँ शैक्षिक सत्रको भर्ना सम्बन्धी सूचना</h6>
+                                <small class="text-muted"><i class="fa-regular fa-calendar-days me-1"></i> सूचना प्रकाशित मिति</small>
                             </div>
                             <a href="#" class="btn btn-sm btn-outline-primary"><i class="fa-solid fa-download"></i> PDF डाउनलोड</a>
                         </div>
@@ -307,7 +323,7 @@
         </div>
     </section>
 
-    <!-- अनलाइन नतिजा प्रणाली (Online Result System) -->
+    <!-- अनलाइन नतिजा प्रणाली -->
     <section id="results" class="py-5">
         <div class="container">
             <h2 class="section-heading">अनलाइन परीक्षा नतिजा (Online Result System)</h2>
@@ -322,7 +338,7 @@
                             <label class="form-label fw-bold">परीक्षा छान्नुहोस्</label>
                             <select class="form-select" id="examType">
                                 <option value="SEE Mock">कक्षा १० - एस.ई.ई अभ्यास परीक्षा</option>
-                                <option value="Final 2080">वार्षिक परीक्षा २०८०</option>
+                                <option value="Final Exam">वार्षिक परीक्षा</option>
                             </select>
                         </div>
                         <div class="col-md-2 d-flex align-items-end">
@@ -331,7 +347,6 @@
                     </div>
                 </form>
                 
-                <!-- नतिजा देखिने ठाउँ (Result Output) -->
                 <div id="resultCard" class="mt-4 p-4 border rounded bg-light d-none">
                     <h5 class="text-success"><i class="fa-solid fa-circle-check"></i> नतिजा फेला पर्यो!</h5>
                     <hr>
@@ -343,36 +358,36 @@
         </div>
     </section>
 
-    <!-- शिक्षक वर्ग (Teachers Profile) -->
+    <!-- शिक्षक वर्ग -->
     <section id="teachers" class="py-5 bg-white">
         <div class="container">
             <h2 class="section-heading">शिक्षक तथा कर्मचारी वर्ग</h2>
             <div class="row g-4">
                 <div class="col-md-3" data-aos="fade-up">
                     <div class="card card-custom text-center p-3">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" class="rounded-circle mx-auto mb-3 shadow" width="100" height="100" alt="Teacher">
-                        <h6 class="fw-bold mb-0">शिक्षकको नाम</h6>
-                        <small class="text-primary">प्रधानाध्यापक</small>
+                        <img src="principal.jpg" class="rounded-circle mx-auto mb-3 shadow" width="100" height="100" alt="Teacher" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80';">
+                        <h6 class="fw-bold mb-0">प्रधानाध्यापक</h6>
+                        <small class="text-primary">विद्यालय प्रमुख</small>
                     </div>
                 </div>
                 <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
                     <div class="card card-custom text-center p-3">
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" class="rounded-circle mx-auto mb-3 shadow" width="100" height="100" alt="Teacher">
-                        <h6 class="fw-bold mb-0">शिक्षकको नाम</h6>
+                        <h6 class="fw-bold mb-0">शिक्षक</h6>
                         <small class="text-primary">गणित शिक्षक</small>
                     </div>
                 </div>
                 <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
                     <div class="card card-custom text-center p-3">
                         <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" class="rounded-circle mx-auto mb-3 shadow" width="100" height="100" alt="Teacher">
-                        <h6 class="fw-bold mb-0">शिक्षिकाको नाम</h6>
+                        <h6 class="fw-bold mb-0">शिक्षिका</h6>
                         <small class="text-primary">अंग्रेजी शिक्षिका</small>
                     </div>
                 </div>
                 <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
                     <div class="card card-custom text-center p-3">
                         <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" class="rounded-circle mx-auto mb-3 shadow" width="100" height="100" alt="Teacher">
-                        <h6 class="fw-bold mb-0">शिक्षकको नाम</h6>
+                        <h6 class="fw-bold mb-0">शिक्षक</h6>
                         <small class="text-primary">विज्ञान शिक्षक</small>
                     </div>
                 </div>
@@ -380,19 +395,19 @@
         </div>
     </section>
 
-    <!-- फोटो ग्यालेरी (Gallery) -->
+    <!-- फोटो ग्यालेरी -->
     <section id="gallery" class="py-5">
         <div class="container">
             <h2 class="section-heading">फोटो ग्यालेरी (Gallery)</h2>
             <div class="row g-3">
-                <div class="col-md-4"><img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=600&q=80" class="gallery-img shadow-sm" alt="School"></div>
+                <div class="col-md-4"><img src="school.jpg" class="gallery-img shadow-sm" alt="School" onerror="this.src='https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=600&q=80';"></div>
                 <div class="col-md-4"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80" class="gallery-img shadow-sm" alt="Classroom"></div>
                 <div class="col-md-4"><img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=600&q=80" class="gallery-img shadow-sm" alt="Students"></div>
             </div>
         </div>
     </section>
 
-    <!-- सम्पर्क तथा नक्सा (Contact Section) -->
+    <!-- सम्पर्क तथा नक्सा -->
     <section id="contact" class="py-5 bg-white">
         <div class="container">
             <h2 class="section-heading">सम्पर्क गर्नुहोस् (Contact Us)</h2>
@@ -401,10 +416,11 @@
                     <div class="card card-custom p-4 h-100">
                         <h5 class="fw-bold mb-3 text-primary">श्री शिशु सुधार माध्यमिक विद्यालय</h5>
                         <p><i class="fa-solid fa-location-dot me-2 text-primary"></i> <strong>ठेगाना:</strong> गाजरी, पूर्वीचौकी गाउँपालिका-६, डोटी, सुदूरपश्चिम प्रदेश</p>
+                        <p><i class="fa-solid fa-calendar-days me-2 text-primary"></i> <strong>स्थापना:</strong> वि.सं. २०१७</p>
                         <p><i class="fa-solid fa-envelope me-2 text-primary"></i> <strong>इमेल:</strong> info@shishusudhar.edu.np</p>
                         <p><i class="fa-solid fa-phone me-2 text-primary"></i> <strong>फोन:</strong> +977-98XXXXXXXX</p>
                         <div class="mt-3">
-                            <a href="#" class="btn btn-outline-primary btn-sm"><i class="fa-brands fa-facebook me-1"></i> फेसबुक पेज लाइक गर्नुहोस्</a>
+                            <a href="#" class="btn btn-outline-primary btn-sm"><i class="fa-brands fa-facebook me-1"></i> फेसबुक पेज</a>
                         </div>
                     </div>
                 </div>
@@ -415,13 +431,13 @@
         </div>
     </section>
 
-    <!-- फुटर (Footer) -->
+    <!-- फुटर -->
     <footer class="footer">
         <div class="container">
             <div class="row g-4">
                 <div class="col-md-5">
                     <h5 class="text-white fw-bold">श्री शिशु सुधार माध्यमिक विद्यालय</h5>
-                    <p class="small">गाजरी, पूर्वीचौकी गाउँपालिका-६, डोटी, सुदूरपश्चिम प्रदेश, नेपाल। गुणस्तरीय शिक्षाको भरपर्दो गन्तव्य।</p>
+                    <p class="small">गाजरी, पूर्वीचौकी गाउँपालिका-६, डोटी। स्थापना वि.सं. २०१७। गुणस्तरीय शिक्षाको भरपर्दो गन्तव्य।</p>
                 </div>
                 <div class="col-md-3">
                     <h5 class="text-white fw-bold">द्रुत लिङ्कहरू</h5>
@@ -433,23 +449,23 @@
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h5 class="text-white fw-bold">आगन्तुक काउन्टर (Visitor Counter)</h5>
+                    <h5 class="text-white fw-bold">Visitor Counter</h5>
                     <p class="badge bg-primary fs-6"><i class="fa-solid fa-users me-2"></i> कुल आगन्तुक: <span id="visitorCounter">13,420</span></p>
                 </div>
             </div>
             <hr class="my-4 border-secondary">
             <div class="text-center small">
-                © <span id="currentYear"></span> श्री शिशु सुधार माध्यमिक विद्यालय, गाजरी, डोटी। सर्वाधिकार सुरक्षित।
+                © <span id="currentYear"></span> श्री शिशु सुधार माध्यमिक विद्यालय (स्था: २०१७), गाजरी, डोटी। सर्वाधिकार सुरक्षित।
             </div>
         </div>
     </footer>
 
-    <!-- अनलाइन भर्ना मोडल (Online Admission Modal) -->
+    <!-- अनलाइन भर्ना मोडल -->
     <div class="modal fade" id="admissionModal" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title"><i class="fa-solid fa-user-plus me-2"></i> अनलाइन भर्ना फारम (Online Admission Form)</h5>
+                    <h5 class="modal-title"><i class="fa-solid fa-user-plus me-2"></i> अनलाइन भर्ना फारम</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
@@ -457,27 +473,20 @@
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <label class="form-label fw-bold">विद्यार्थीको पूरा नाम *</label>
-                                <input type="text" class="form-control" placeholder="विद्यार्थीको नाम लेख्नुहोस्" required>
+                                <input type="text" class="form-control" placeholder="विद्यार्थीको नाम" required>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label fw-bold">अभिभावकको नाम *</label>
-                                <input type="text" class="form-control" placeholder="बुवा/आमा वा संरक्षकको नाम" required>
+                                <input type="text" class="form-control" placeholder="अभिभावकको नाम" required>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label fw-bold">भर्ना हुन चाहेको कक्षा *</label>
                                 <select class="form-select" required>
                                     <option selected disabled value="">कक्षा छान्नुहोस्</option>
-                                    <option>बालविकास (ECD / Pre-Primary)</option>
-                                    <option>कक्षा १</option>
-                                    <option>कक्षा २</option>
-                                    <option>कक्षा ३</option>
-                                    <option>कक्षा ४</option>
-                                    <option>कक्षा ५</option>
-                                    <option>कक्षा ६</option>
-                                    <option>कक्षा ७</option>
-                                    <option>कक्षा ८</option>
-                                    <option>कक्षा ९</option>
-                                    <option>कक्षा १० (SEE)</option>
+                                    <option>बालविकास (ECD)</option>
+                                    <option>कक्षा १ - ५</option>
+                                    <option>कक्षा ६ - ८</option>
+                                    <option>कक्षा ९ - १० (SEE)</option>
                                 </select>
                             </div>
                             <div class="col-md-6">
@@ -495,17 +504,13 @@
         </div>
     </div>
 
-    <!-- JavaScript कोड -->
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // AOS एनिमेसन इनिसिलाइज
         AOS.init({ duration: 800, once: true });
-
-        // हालको साल स्वतः अपडेट गर्ने
         document.getElementById('currentYear').innerText = new Date().getFullYear();
 
-        // डार्क मोड र लाइट मोड स्विच गर्ने स्क्रिप्ट
         const themeToggle = document.getElementById('themeToggle');
         themeToggle.addEventListener('click', () => {
             const currentTheme = document.body.getAttribute('data-theme');
@@ -518,20 +523,16 @@
             }
         });
 
-        // अनलाइन नतिजा खोज्ने डेमो लजिक
         document.getElementById('resultForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const symbol = document.getElementById('symbolNo').value;
-            const resultCard = document.getElementById('resultCard');
-            
             document.getElementById('resSymbol').innerText = symbol;
-            resultCard.classList.remove('d-none');
+            document.getElementById('resultCard').classList.remove('d-none');
         });
 
-        // अनलाइन भर्ना फारम सबमिट हुँदा देखिने म्यासेज
         document.getElementById('admissionForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('तपाईंको अनलाइन भर्ना फारम सफलतापूर्वक पेश भयो! विद्यालय प्रशासनले छिट्टै तपाईंसँग सम्पर्क गर्नेछ।');
+            alert('भर्ना फारम सफलतापूर्वक पेश भयो!');
             var modalEl = document.getElementById('admissionModal');
             var modal = bootstrap.Modal.getInstance(modalEl);
             modal.hide();
